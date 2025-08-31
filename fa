@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class FoodAdulterationDetector {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== FOOD ADULTERATION DETECTOR ===");
+        System.out.println("Choose a food item to test:");
+        System.out.println("1. Milk");
+        System.out.println("2. Sugar");
+        System.out.println("3. Rice");
+        System.out.println("4. Oil");
+        System.out.println("5. Tea Leaves");
+        System.out.println("6. Exit");
+
+        while (true) {
+            System.out.print("\nEnter your choice (1-6): ");
+            int choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("\nMilk Test:");
+                    System.out.println("→ Add a few drops of iodine solution to milk.");
+                    System.out.println("→ If it turns blue, starch is present → Adulterated!");
+                    break;
+                case 2:
+                    System.out.println("\nSugar Test:");
+                    System.out.println("→ Dissolve sugar in water.");
+                    System.out.println("→ Chalk powder settles at the bottom → Adulterated!");
+                    break;
+                case 3:
+                    System.out.println("\nRice Test:");
+                    System.out.println("→ Drop rice grains into water.");
+                    System.out.println("→ If they float, plastic may be present → Adulterated!");
+                    break;
+                case 4:
+                    System.out.println("\nOil Test:");
+                    System.out.println("→ Mix oil with equal amount of petrol.");
+                    System.out.println("→ If it forms a pink/red color, argemone oil is present → Adulterated!");
+                    break;
+                case 5:
+                    System.out.println("\nTea Leaves Test:");
+                    System.out.println("→ Sprinkle tea leaves on wet paper.");
+                    System.out.println("→ If color spreads, coal tar dye is present → Adulterated!");
+                    break;
+                case 6:
+                    System.out.println("Exiting... Stay safe from adulterated food!");
+                    sc.close();
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please enter 1–6.");
+            }
+        }
+    }
+}
